@@ -1,0 +1,9 @@
+1、HTTP request Smuggling；
+Taking advantage of the differences in the parsing and processing methods of requests and responses in the HTTP protocol, by constructing specific malicious requests, deceiving servers and proxy servers, thereby bypassing security mechanisms and performing unauthorized operations；
+Establish the correct http protocol standard and detect it, intercept an http request
+2、SSRF；
+A security vulnerability in which the attacker constructs a request and the server initiates the request. Generally, the target of ssrf attacks is internal systems that are inaccessible from the external network. To put it simply, it is to use the server vulnerability to send a constructed request as the server to the internal network where the server is located for attack；
+internal ACL、response check、Disable unnecessary protocols
+3、Phishing attacks; inducing users to perform password operations to obtain user account passwords; security awareness training, Multi-factor authentication
+4、Multiple layers of reverse proxies prevent the server from properly identifying the client's real IP; 
+the border proxy extracts the client's IP and inserts a new identification field, such as x-real-client-IP: 68.16.123.176, or directly takes the first leftmost one ip as the real source ip
